@@ -1,0 +1,44 @@
+user_name = "srinu"
+password = 'srinu'
+card_number = 2812
+print(' ATM Machine  Management System ')
+input_name = input("Enter username: ")
+input_password = str(input("Enter password: "))
+card_details = int(input("Enter card number:"))
+print("-----------------------------------------------------")
+if input_name == user_name and input_password == password and card_details == card_number :
+    
+    print('''
+1.Deposite
+2.Withdraw
+3.Ministatement 
+4.Exit
+     ''')
+    amount = 5000
+    option = int(input("Select your option: "))
+    if option ==1:
+        deposite = int(input("Enter the amount"))
+        amount+= deposite
+        print("Total amount: ",amount)
+    elif option ==2:
+        withdraw = int(input("Enter your amount "))
+        amount-= withdraw
+        print("Total amount: ", amount)
+    elif option == 3:
+        print("==========ATM==========")
+        
+        print("Name:",user_name)
+        print("CARD NUMBER:",card_number)
+        print("AVAIL BAL: RS.",amount)
+        import datetime
+        now = datetime.datetime.now()
+        print (now.strftime("Date: %Y/%m/%d"))
+        print(now.strftime("Time: %H:%M"))
+
+        print("-------Thanks for visiting------")
+        
+        print("Visit us at www.srinubankofindia.com")
+    elif option ==4:
+        exit()
+else:
+        print("Please enter correct logins")
